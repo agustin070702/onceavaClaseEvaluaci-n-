@@ -1,0 +1,120 @@
+body {
+  font-family: "Montserrat", sans-serif;
+}
+h1, h2, h3 {
+  font-weight: 900; /* negrita */
+}
+
+p, td, small {
+  font-weight: 400; /* regular */
+}
+
+
+:root{
+  --brand-fucsia: #ff8fab;
+  --brand-fucsia-hover: #ffc2d1;
+  --bg-body: #f7f7f9;       
+  --bg-panel: #ffe5ec;       
+  --nav-bg: #fb6f92;        
+  --nav-text: #ffffff;       
+}
+
+
+body{
+  background-color: #ffe5ec;
+}
+
+.bg-body-tertiary{
+  background-color: var(--bg-panel) !important;
+}
+
+.navbar.bg-dark{
+  background-color: var(--nav-bg) !important;
+  color: var(--nav-text);
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+
+.text-bg-dark{
+  background-color: var(--nav-bg) !important;
+  color: var(--nav-text) !important;
+}
+
+/* ===== Botonessss ===== */
+.btn-primary{
+  --bs-btn-bg: var(--brand-fucsia);
+  --bs-btn-border-color: var(--brand-fucsia);
+  --bs-btn-hover-bg: var(--brand-fucsia-hover);
+  --bs-btn-hover-border-color: var(--brand-fucsia-hover);
+  --bs-btn-active-bg: var(--brand-fucsia-hover);
+  --bs-btn-active-border-color: var(--brand-fucsia-hover);
+}
+
+.btn-secondary {
+  --bs-btn-bg: #ffffff;                
+  --bs-btn-color: var(--brand-fucsia); 
+  --bs-btn-border-color: var(--brand-fucsia); 
+  --bs-btn-hover-bg: var(--brand-fucsia);       /* al pasar el mouse */
+  --bs-btn-hover-border-color: var(--brand-fucsia);
+  --bs-btn-hover-color: #ffffff;               
+  --bs-btn-active-bg: var(--brand-fucsia-hover);
+  --bs-btn-active-border-color: var(--brand-fucsia-hover);
+}
+
+.card-img-top{
+  height: 225px;
+  object-fit: cover;
+  border-width: 10px 0;
+}
+
+
+.skill-bar rect{ rx:5; ry:5; }
+.skill-bg   { fill: rgba(255, 45, 138, .18); }  
+.skill-fill { fill: var(--brand-fucsia); }      
+
+
+td svg{ display:block; margin:0 auto; }
+
+
+.skills-box{
+  background: transparent !important;
+  box-shadow: none !important;
+  border: 0 !important;
+}
+
+/* Asegurar que la tabla no pinte fondo */
+#navbarHeader .table{
+  --bs-table-bg: transparent;
+  background: transparent !important;
+}
+
+#navbarHeader .skills-box,
+#navbarHeader .skills-box *{
+  color: var(--nav-text) !important;
+}
+
+
+/* Suavizado por defecto */
+.card{
+  transition: transform .25s ease, box-shadow .25s ease;
+  will-change: transform, box-shadow;
+}
+
+/* Efecto */
+@media (hover: hover){
+  .card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0,0,0,.12);
+  }
+}
+
+
+.card:focus-within{
+  transform: translateY(-10px);
+  box-shadow: 0 24px 48px rgba(0,0,0,.250);
+}
+
+.card {
+  border-radius: 18px;  
+  overflow: hidden;     
+}
